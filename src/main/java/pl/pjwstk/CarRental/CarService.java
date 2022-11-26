@@ -39,9 +39,7 @@ public class CarService {
             return null;
         }
 
-        if (rentalStorage.getRentals().isEmpty()) {
-
-        } else {
+        if (!rentalStorage.getRentals().isEmpty()) {
             for (int i = 0; i < rentalStorage.getRentals().size(); i++) {
                 if (carStorage.findByVin(vin) == rentalStorage.getRentals().get(i).getCar()) {
                     System.out.println("zajęte");
@@ -49,8 +47,6 @@ public class CarService {
                     taken = true;
                     price = 0;
                     break;
-                } else {
-                    taken = false;
                 }
             }
         }

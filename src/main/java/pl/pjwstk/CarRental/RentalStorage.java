@@ -7,7 +7,7 @@ import java.util.List;
 
 @Component
 public class RentalStorage {
-    private List<Rental> rentals = new ArrayList<>();
+    private final List<Rental> rentals = new ArrayList<>();
 
     public RentalStorage() {
     }
